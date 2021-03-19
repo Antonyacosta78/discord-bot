@@ -1,0 +1,32 @@
+{
+  "name": "matox-discord-bot",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/bot.ts",
+  "author": "Yo",
+  "license": "MIT",
+  "scripts": {
+    "build:grammars": "nearleyc src/grammars/command.ne -o src/grammars/command.ts",
+    "build": "tsc --project tsconfig.json && tsconfig-replace-paths -p tsconfig.json",
+    "dev": "export $(egrep -v '^#' .env | xargs) && nodemon --watch src -e ts,js,json --ignore '**/*.spec.ts' -r tsconfig-paths/register --exec 'ts-node' src/bot.ts"
+  },
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "i18next": "^19.7.0",
+    "rxjs": "^6.6.3",
+    "nearley": "^2.19.7"
+  },
+  "devDependencies": {
+    "@types/nearley": "^2.11.1",
+    "@types/node": "^14.10.1",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
+    "eslint": "^7.9.0",
+    "nodemon": "^2.0.4",
+    "ts-node": "^9.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "tsconfig-replace-paths": "^0.0.5",
+    "tslib": "^2.0.1",
+    "typescript": "^4.0.2"
+  }
+}

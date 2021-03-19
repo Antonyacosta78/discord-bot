@@ -1,0 +1,4 @@
+{
+  "invokeMethod": "tag", // see available methods (tag, prefix)
+  "prefix": "!" //used when invokeMethod is prefix
+}

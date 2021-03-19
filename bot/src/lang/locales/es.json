@@ -1,0 +1,6 @@
+{
+  "GENERAL": {
+    "HEALTHCHECK": "Bot online, tiempo en actividad (uptime): {{uptime}} segundos",
+    "COMMAND_NOT_FOUND": "Comando `{{command}}` no reconocido"
+  }
+}

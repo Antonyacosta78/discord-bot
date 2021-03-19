@@ -1,0 +1,9 @@
+FROM node:12.18.3
+
+LABEL maintainer="Matoxina <matoxina@gmail.com>"
+
+WORKDIR /bot
+
+ENV PATH /bot/node_modules/.bin:$PATH
+
+CMD ["yarn", "dev"]
